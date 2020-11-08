@@ -68,7 +68,7 @@ ggplot(haha_data, aes(x=cluster, y=ratio, fill=cluster)) +
   geom_bar(stat="identity")+theme_classic()
 ~~~
 
-![image-20201108201857944](bulk_WGBS.assets\image-20201108201857944.png)
+![image-20201108201857944](bulk_WGBS.assets/image-20201108201857944-1604853348603.png)
 
 ~~~shell
 #DMR
@@ -102,7 +102,7 @@ ggplot(data, aes(x = "", y = ratio, fill = variable)) +
   theme_void()
 ~~~
 
-![image-20201108204946367](bulk_WGBS.assets\image-20201108204946367.png)
+![image-20201108204946367](bulk_WGBS.assets/image-20201108204946367-1604853357551.png)
 
 ~~~R
 DMR_filter <- as(DMR_filter,"GRanges")
@@ -143,7 +143,7 @@ ggplot(data, aes(x = "", y = ratio, fill = variable)) +
   theme_void()+ ggtitle("CPGs Hyper")+ theme(plot.title = element_text(hjust = 0.5))
 ~~~
 
-![image-20201108210814109](bulk_WGBS.assets\image-20201108210814109.png)
+![image-20201108210814109](bulk_WGBS.assets/image-20201108210814109-1604853368873.png)
 
 ~~~R
 data <- data.frame(ratio=c("11.1","64.9","1.4","22.6"),variable=c("cpg_inter","cpg_islands","cpg_shelves","cpg_shores"))
@@ -160,7 +160,7 @@ ggplot(data, aes(x = "", y = ratio, fill = variable)) +
   theme_void()+ ggtitle("CPGs Hypo")+ theme(plot.title = element_text(hjust = 0.5))
 ~~~
 
-![image-20201108210856943](bulk_WGBS.assets\image-20201108210856943.png)
+![image-20201108210856943](bulk_WGBS.assets/image-20201108210856943-1604853376718.png)
 
 ~~~R
 txdb<-TxDb.Mmusculus.UCSC.mm10.knownGene
@@ -206,7 +206,7 @@ ggplot(data, aes(x = "", y = ratio, fill = variable)) +
   theme_void()+ ggtitle("gene region Hyper")+ theme(plot.title = element_text(hjust = 0.5))
 ~~~
 
-![image-20201108211216894](bulk_WGBS.assets\image-20201108211216894.png)
+![image-20201108211216894](bulk_WGBS.assets/image-20201108211216894-1604853392796.png)
 
 ~~~R
 data <- data.frame(ratio=c("6.1","4.9","4.0","85.0"),variable=c("Exon","Intergenic","Intron","Promoter"))
@@ -223,7 +223,7 @@ ggplot(data, aes(x = "", y = ratio, fill = variable)) +
   theme_void()+ ggtitle("gene region Hypo")+ theme(plot.title = element_text(hjust = 0.5))
 ~~~
 
-![image-20201108211239245](bulk_WGBS.assets\image-20201108211239245.png)
+![image-20201108211040241](bulk_WGBS.assets/image-20201108211040241-1604853403001.png)
 
 ~~~R
 ee	<-as.matrix(df_DMR_hypo$geneId)
@@ -240,7 +240,7 @@ KEGGdf_DMR_hypo <- enrichKEGG(gene =dd,
 dotplot(KEGGdf_DMR_hypo, showCategory=10)
 ~~~
 
-![image-20201108230201971](bulk_WGBS.assets\image-20201108230201971.png)
+![image-20201108230201971](bulk_WGBS.assets/image-20201108230201971-1604853411253.png)
 
 ~~~R
 #Volcanic maps
@@ -266,7 +266,7 @@ scale_color_manual(values=c("red","blue", "grey"))  + ggtitle("TRMMLL3  vs TRM")
 theme(plot.title = element_text(hjust = 0.5, face="bold")) + xlim(-1,1)+ylim(0,30)+theme_classic()
 ~~~
 
-![image-20201108212210605](bulk_WGBS.assets\image-20201108212210605.png)
+![image-20201108212210605](bulk_WGBS.assets/image-20201108212210605-1604853419599.png)
 
 ~~~R
 #Venn plot
@@ -304,7 +304,7 @@ enrich_pvalue <- function(N, A, B, k)
 enrich_pvalue(24223, 1244, 1116, 146) #2.185462e-16
 ~~~
 
-![image-20201108214857419](bulk_WGBS.assets\image-20201108214857419.png)
+![image-20201108214857419](bulk_WGBS.assets/image-20201108214857419-1604853428450.png)
 
 ~~~R
 T<-venn.diagram(list(RNA_PRMK_down=na.omit(as.character(unique(RNA_PRMK_down$symbol))),df_DMR_hyper=na.omit(as.character(unique(df_DMR_hyper$SYMBOL)))),
@@ -329,7 +329,7 @@ plot(fit1,quantities = TRUE )
 enrich_pvalue(24223, 1174, 252, 25) #0.002891639
 ~~~
 
-![image-20201108214914646](bulk_WGBS.assets\image-20201108214914646.png)
+![image-20201108214914646](bulk_WGBS.assets/image-20201108214914646-1604853477485.png)
 
 ~~~shell
 ViewBS MethOverRegion --region annots_mm10_cpgs_ViewBS.bed \
@@ -337,7 +337,7 @@ ViewBS MethOverRegion --region annots_mm10_cpgs_ViewBS.bed \
 --prefix cpgs_all_C --context CG
 ~~~
 
-![image-20201108221526482](bulk_WGBS.assets\image-20201108221526482.png)
+![image-20201108221526482](bulk_WGBS.assets/image-20201108221526482-1604853486728.png)
 
 ~~~R
 #CpG density
@@ -363,7 +363,7 @@ ggplot(all_data, aes(x = Meth_ratio)) +
   stat_density(aes(group = cluster, color =cluster),position="identity",geom="line")+ xlim(-0.1,1.1)+theme_classic()
 ~~~
 
-![image-20201108224730338](bulk_WGBS.assets\image-20201108224730338.png)
+![image-20201108224730338](bulk_WGBS.assets/image-20201108224730338-1604853494639.png)
 
 ~~~R
 all_CG$end <- all_CG$pos
@@ -398,7 +398,7 @@ true_all_data$new_group <- paste(true_all_data$group,true_all_data$annot.type)
 compare_means(B_value ~ new_group, data = true_all_data)
 ~~~
 
-![image-20201108231201912](bulk_WGBS.assets\image-20201108231201912.png)
+![image-20201108231201912](bulk_WGBS.assets/image-20201108231201912-1604853502787.png)
 
 ~~~R
 #C Density
@@ -470,4 +470,4 @@ ggplot(new_data, aes(x = Meth_ratio)) +
   stat_density(aes(group = cluster, color =cluster),position="identity",geom="line")+ xlim(-0.1,1.1)+theme_classic()
 ~~~
 
-![image-20201108224956493](bulk_WGBS.assets\image-20201108224956493.png)
+![image-20201108224956493](bulk_WGBS.assets/image-20201108224956493-1604853510436.png)

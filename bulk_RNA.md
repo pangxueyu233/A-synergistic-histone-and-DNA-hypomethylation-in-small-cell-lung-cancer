@@ -180,7 +180,7 @@ the_break<-c(break1,break2[-1])
 pheatmap(all,border_color=NA,cluster_cols=F,cluster_row=F,cellwidth=30,cellheight=9.5,fontsize=8,color = colorRampPalette(c("navy", "white","firebrick3"))(50),breaks=the_break)
 ~~~
 
-![image-20201108134618487](bulk_RNA.assets\image-20201108134618487.png)
+![image-20201108134618487](bulk_RNA.assets/image-20201108134618487-1604853272136.png)
 
 ## Part2. RNA-seq2 (PRMK vs PRM) analysis
 
@@ -328,7 +328,7 @@ XY_heatmap(seurat_obj=MLL3_RNA,group="cluster",genes=rownames(MLL3_RNA),all_num=
   assay_sel="RNA",color=colorRampPalette(c("firebrick3", "white", "navy"))(50),min_and_max_cut=2,show_row_names=FALSE,mark_gene=mark_gene,label_size=0)
 ~~~
 
-![image-20201108133950316](bulk_RNA.assets\image-20201108133950316.png)
+![image-20201108133950316](bulk_RNA.assets/image-20201108133950316-1604853299440.png)
 
 ~~~R
 upres_1 <- RNAseq2_result_all_p_up
@@ -380,7 +380,7 @@ up_kegg1 <- up_kegg[1:5,]
   print(g_kegg)
 ~~~
 
-![image-20201108134031915](bulk_RNA.assets\image-20201108134031915.png)
+![image-20201108134031915](bulk_RNA.assets/image-20201108134031915-1604853314099.png)
 
 ## Part3. RNA-seq3 (sgMeis2 vs sgScr ) analysis
 
@@ -544,5 +544,5 @@ ggbarplot(GO_down_RNA_10,
   title="sgMeis2 down GO")
 ~~~
 
-![image-20201108120418092](bulk_RNA.assets\image-20201108120418092.png)
+![image-20201108120418092](bulk_RNA.assets/image-20201108120418092-1604853323487.png)
 
