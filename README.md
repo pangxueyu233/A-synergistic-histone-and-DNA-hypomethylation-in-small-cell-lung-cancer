@@ -1,2 +1,428 @@
-# A-synergistic-histone-and-DNA-hypomethylation-in-small-cell-lung-cancer
-A synergistic histone and DNA hypomethylation in small cell lung cancer
+# **A synergistic histone and DNA hypomethylation in small cell lung cancer**
+
+As we know, there were little omics data of SCLC patients even murine SCLC. Therefore, we have accumulated all omics data we could get accessed that also were re-analyzed and mentioned in our paper. And we also hope could real-time maintain these resources of SCLC, and if you have some data about SCLC we haven’t added or mentioned in list, you could contact us anytime and we would like to integrate your resource here. 
+
+To Increase analyzing reproducibility of our data, we will record and submit all scripts and processed data for sharing our murine data and academic principles. We have submitted all processed data on [figshare](https://figshare.com/) and you could download them followed their agreements. We also store our codes and figures in Markdown files that everyone could regarded as a tutorial for beginner of Omics analysis. And detail description you could get in following pages.
+
+In this project, we have modified a lot of function formulas from perfect packages to better use in our data analysis and visualizations. And we also be happy to share them to help you improve your work efficiency in omics data analysis and visualizations.
+
+# **All SCLC patients’ data files list**
+
+This page recorded all omics data about SCLC patients that were mentioned and analyzed in our paper. And the detail list was displayed as following:
+
+| Source_of_Data  | Data_type                                          | File_type | Species | Disease | Doi_number                                                   |                     Clinical_info                     | Normal_samples | ID          |
+| --------------- | -------------------------------------------------- | --------- | ------- | ------- | ------------------------------------------------------------ | :---------------------------------------------------: | :------------: | ----------- |
+| Nature Genetics | 42WES                                              | .csv      | HUMAN   | SCLC    | [10.1038/ng.2405](https://www.nature.com/articles/ng.2405)   |                          No                           |       No       | SCLC_DATA_1 |
+| Nature Genetics | 29 WES/ 2WGS/   15RNA-seq                          | .csv      | HUMAN   | SCLC    | [10.1038/ng.2396](https://www.nature.com/articles/ng.2396)   |                          Yes                          |       No       | SCLC_DATA_2 |
+| Nature          | 110 WGS/       81 RNA-seq                          | .csv      | HUMAN   | SCLC    | [10.1038/nature14664](https://www.nature.com/articles/nature14664) |                          Yes                          |       No       | SCLC_DATA_3 |
+| PLOS Genetics   | 86 RNA-seq                                         | .csv      | HUMAN   | SCLC    | [10.1371/journal.pgen.1005895](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005895) | Yes (but only part of patients matches to omics data) |      Yes       | SCLC_DATA_4 |
+| Nature Cancer   | 8 scRNA-seq (but we only get the 7 scRNA-seq data) | .rds      | HUMAN   | SCLC    | [10.5281/zenodo.3574846](https://www.nature.com/articles/s43018-020-0046-2) |                          No                           |       No       | SCLC_DATA_5 |
+| Nature Cancer   | 90RNA-seq                                          | .csv      | HUMAN   | SCLC    | [10.1038/s43018-019-0020-z](https://www.nature.com/articles/s43018-019-0020-z) |                          Yes                          |       No       | SCLC_DATA_6 |
+
+The tree map showed the files detail as following: 
+
+~~~shell
+.
+├── SCLC_DATA_1
+│   ├── SCLC_NG_SOX2_Clinical_Normal.csv
+│   ├── SCLC_NG_SOX2_Clinical_Tumor.csv
+│   └── SCLC_NG_SOX2_Mut.csv
+├── SCLC_DATA_2
+│   ├── SCLC_NG1_Clnical.csv
+│   ├── SCLC_NG1_Mut.csv
+│   └── SCLC_NG1_RNA.csv
+├── SCLC_DATA_3
+│   ├── SCLC_Nature_Clinical.csv
+│   ├── SCLC_Nature_Mut.csv
+│   └── SCLC_Nature_RNA.csv
+├── SCLC_DATA_4
+│   └── ALL_tumor_vs_normal_tpm.csv
+├── SCLC_DATA_5
+│   └── scRNA_SCLC_CTC.rds
+└── SCLC_DATA_6
+    ├── CDX_data.csv
+    └── CDX_META_INFO.csv
+
+6 directories, 13 files
+~~~
+
+And if you want to use these SCLC patients data, you could follow our pipelines by clicking [here](SCLC_Patients_usage.md).
+
+And if you want to use modified function formulas mentioned in our paper, you could see the source codes by clicking [here](MyBestFunction_scRNA.md).
+
+# **All raw data files we have submitted on GEO**
+
+The tree map showed the files detail as following: 
+
+~~~R
+.
+├── ATAC-seq
+│   ├── PRM1_R1.fq.gz
+│   ├── PRM1_R2.fq.gz
+│   ├── PRM2_R1.fq.gz
+│   ├── PRM2_R2.fq.gz
+│   ├── PRMK1_R1.fq.gz
+│   ├── PRMK1_R2.fq.gz
+│   ├── PRMK2_R1.fq.gz
+│   ├── PRMK2_R2.fq.gz
+│   ├── PRM_Liver1_R1.fq.gz
+│   ├── PRM_Liver1_R2.fq.gz
+│   ├── PRM_Liver2_R1.fq.gz
+│   └── PRM_Liver2_R2.fq.gz
+├── RNA-seq
+│   ├── RNAseq1_Lung1_R1.fq.gz
+│   ├── RNAseq1_Lung1_R2.fq.gz
+│   ├── RNAseq1_Lung2_R1.fq.gz
+│   ├── RNAseq1_Lung2_R2.fq.gz
+│   ├── RNAseq1_Lung3_R1.fq.gz
+│   ├── RNAseq1_Lung3_R2.fq.gz
+│   ├── RNAseq1_PRM_1_R1.fq.gz
+│   ├── RNAseq1_PRM_1_R2.fq.gz
+│   ├── RNAseq1_PRM_2_R1.fq.gz
+│   ├── RNAseq1_PRM_2_R2.fq.gz
+│   ├── RNAseq1_PRM_3_R1.fq.gz
+│   ├── RNAseq1_PRM_3_R2.fq.gz
+│   ├── RNAseq2_PRM_2_R1.fq.gz
+│   ├── RNAseq2_PRM_2_R2.fq.gz
+│   ├── RNAseq2_PRM_3_R1.fq.gz
+│   ├── RNAseq2_PRM_3_R2.fq.gz
+│   ├── RNAseq2_PRMK_1_R1.fq.gz
+│   ├── RNAseq2_PRMK_1_R2.fq.gz
+│   ├── RNAseq2_PRMK_2_R1.fq.gz
+│   ├── RNAseq2_PRMK_2_R2.fq.gz
+│   ├── RNAseq2_PRMK_3_R1.fq.gz
+│   ├── RNAseq2_PRMK_3_R2.fq.gz
+│   ├── RNAseq3_sgMeis2_1_R1.fq.gz
+│   ├── RNAseq3_sgMeis2_1_R2.fq.gz
+│   ├── RNAseq3_sgMeis2_2_R1.fq.gz
+│   ├── RNAseq3_sgMeis2_2_R2.fq.gz
+│   ├── RNAseq3_sgMeis2_3_R1.fq.gz
+│   ├── RNAseq3_sgMeis2_3_R2.fq.gz
+│   ├── RNAseq3_sgScr_1_R1.fq.gz
+│   ├── RNAseq3_sgScr_1_R2.fq.gz
+│   ├── RNAseq3_sgScr_2_R1.fq.gz
+│   ├── RNAseq3_sgScr_2_R2.fq.gz
+│   ├── RNAseq3_sgScr_3_R1.fq.gz
+│   └── RNAseq3_sgScr_3_R2.fq.gz
+├── scRNA-seq
+│   ├── Abdominal_LN_R1.fastq.gz
+│   ├── Abdominal_LN_R2.fastq.gz
+│   ├── Left_lung_R1.fastq.gz
+│   ├── Left_lung_R2.fastq.gz
+│   ├── Liver_R1.fastq.gz
+│   ├── Liver_R2.fastq.gz
+│   ├── Thoracic_LN_R1.fastq.gz
+│   └── Thoracic_LN_R2.fastq.gz
+└── WGBS
+    ├── PRM_1_clean_R1.fq.gz
+    ├── PRM_1_clean_R2.fq.gz
+    ├── PRM_2_clean_R1.fq.gz
+    ├── PRM_2_clean_R2.fq.gz
+    ├── PRMK_1_clean_R1.fq.gz
+    ├── PRMK_1_clean_R2.fq.gz
+    ├── PRMK_2_clean_R1.fq.gz
+    └── PRMK_2_clean_R2.fq.gz
+
+4 directories, 62 files
+~~~
+
+And if you want to use our data, you could download them  by clicking [here]().
+
+# **All processed data files should be used in our paper**
+
+In our paper, we used bulk omics data to deeply illustrate academic principles about SCLC metastasis, including bulk RNA-seq, bulk ATAC-seq and bulk WGBS-seq. To increase the reproducibility, we would like to share all processed files that you could download from GEO and figshare.The detail information of each processed file were displayed by tree map. And analysis codes of bulk omics data were recorded and collected that would help you understand how’s the processed files meaning and how’s them could be used in your study. 
+
+Overview of All processed  files and modified codes
+
+~~~shell
+.
+├── ATAC-seq
+│   ├── bam_bw_files
+│   ├── gappedPeak_files
+│   └── RData_files
+├── modified_codes
+│   └── MyBestFunction_scRNA.R
+├── RNA-seq
+│   ├── bam_files
+│   ├── csv_files
+│   └── RData_files
+├── SCLC_Patient_data
+│   ├── SCLC_DATA_1
+│   ├── SCLC_DATA_2
+│   ├── SCLC_DATA_3
+│   ├── SCLC_DATA_4
+│   ├── SCLC_DATA_5
+│   └── SCLC_DATA_6
+├── sc-RNAseq
+│   ├── Chapter1
+│   └── Chapter2
+└── WGBS
+    ├── CGmap_Igv_files
+    ├── DMR_files
+    ├── DMS_files
+    ├── for_plot_files
+    └── viewBS_files
+25 directories, 1 file
+~~~
+
+## Bulk RNA-seq processed data files
+
+All the RNA-seq processed data files were listed in the tree map as following:
+
+~~~SHELL
+.
+├── bam_files
+│   ├── RNAseq1_Lung1.bam
+│   ├── RNAseq1_Lung2.bam
+│   ├── RNAseq1_Lung3.bam
+│   ├── RNAseq1_PRM_1.bam
+│   ├── RNAseq1_PRM_2.bam
+│   ├── RNAseq1_PRM_3.bam
+│   ├── RNAseq2_PRM_2.bam
+│   ├── RNAseq2_PRM_3.bam
+│   ├── RNAseq2_PRMK_1.bam
+│   ├── RNAseq2_PRMK_2.bam
+│   ├── RNAseq2_PRMK_3.bam
+│   ├── RNAseq3_sgMeis2_1.bam
+│   ├── RNAseq3_sgMeis2_2.bam
+│   ├── RNAseq3_sgMeis2_3.bam
+│   ├── RNAseq3_sgScr_1.bam
+│   ├── RNAseq3_sgScr_2.bam
+│   └── RNAseq3_sgScr_3.bam
+├── csv_files
+│   ├── 1_RNAseq1_PRM_VS_Lung_result_all.csv
+│   ├── 1_RNAseq1_PRM_VS_Lung_result_DEGs.csv
+│   ├── 1_RNAseq2_PRMK_VS_PRM_result_all.csv
+│   ├── 1_RNAseq2_PRMK_VS_PRM_result_DEGs.csv
+│   ├── 1_RNAseq3_sgMeis2_VS_sgScr_result_all.csv
+│   ├── 1_RNAseq3_sgMeis2_VS_sgScr_result_DEGs.csv
+│   ├── RNAseq1_sampleTable.csv
+│   ├── RNAseq2_sampleTable.csv
+│   └── RNAseq3_sampleTable.csv
+└── RData_files
+    ├── ebg_GRCm38.RData
+    ├── RNAseq1_se.RData
+    ├── RNAseq2_se.RData
+    ├── RNAseq3_se.RData
+    └── txdb_GRCm38.RData
+3 directories, 31 files
+~~~
+
+## Bulk ATAC-seq processed data files
+
+All the ATAC-seq processed data files were listed in the tree map as following:
+
+~~~shell
+.
+├── bam_bw_files
+│   ├── all_PRM1.bam
+│   ├── all_PRM2.bam
+│   ├── all_PRMK1.bam
+│   ├── all_PRMK2.bam
+│   ├── all_PRM_liver1.bam
+│   ├── all_PRM_liver2.bam
+│   ├── combine_all_PRM.bw
+│   ├── combine_all_PRMK.bw
+│   ├── combine_all_PRM_liver.bw
+│   └── mm10.ucsc.refseq.bed
+├── gappedPeak_files
+│   ├── all_PRM1_peaks.gappedPeak
+│   ├── all_PRM2_peaks.gappedPeak
+│   ├── all_PRMK1_peaks.gappedPeak
+│   ├── all_PRMK2_peaks.gappedPeak
+│   ├── all_PRM_liver1_peaks.gappedPeak
+│   └── all_PRM_liver2_peaks.gappedPeak
+└── RData_files
+    ├── 1_meta_PRM_vs_PRM.rds
+    ├── 1_met_PRM_VS_pri_PRM_res_symbol.rds
+    ├── 1_pri_PRMK_VS_pri_PRM_res_symbol.rds
+    ├── 1_PRMK_vs_PRM.rds
+    ├── atacDDS.rds
+    ├── countsFromATAC.RData
+    ├── met_PRM_VS_pri_PRM_res_symbol.rds
+    └── pri_PRMK_VS_pri_PRM_res_symbol.rds
+3 directories, 24 files
+~~~
+
+## Bulk WGBS-seq processed data files
+
+All the WGBS-seq processed data files were listed in the tree map as following:
+
+~~~shell
+.
+├── CGmap_Igv_files
+│   ├── TRMMLL3_rep1_all.CGmap.gz
+│   ├── TRMMLL3_rep2_all.CGmap.gz
+│   ├── TRMMLL3_WGBS.bw
+│   ├── TRM_rep1_all.CGmap.gz
+│   ├── TRM_rep2_all.CGmap.gz
+│   └── TRM_WGBS.bw
+├── DMR_files
+│   ├── 1_PRMK_vs_PRM_DMR_all_cpgs_anno.csv
+│   ├── 1_PRMK_vs_PRM_DMR_all_gene_anno.csv
+│   └── 1_result_all_matrix_CG.txt
+├── DMS_files
+│   ├── 1_PRMK_vs_PRM_DMS_all.csv
+│   ├── TRMMLL3_rep1_all.CGmap_2.txt
+│   ├── TRMMLL3_rep2_all.CGmap_2.txt
+│   ├── TRM_rep1_all.CGmap_2.txt
+│   └── TRM_rep2_all.CGmap_2.txt
+├── for_plot_files
+│   ├── all_matrix_CG.txt
+│   ├── all_matrix_chr10.txt
+│   ├── all_matrix_chr11.txt
+│   ├── all_matrix_chr12.txt
+│   ├── all_matrix_chr13.txt
+│   ├── all_matrix_chr14.txt
+│   ├── all_matrix_chr15.txt
+│   ├── all_matrix_chr16.txt
+│   ├── all_matrix_chr17.txt
+│   ├── all_matrix_chr18.txt
+│   ├── all_matrix_chr19.txt
+│   ├── all_matrix_chr1.txt
+│   ├── all_matrix_chr2.txt
+│   ├── all_matrix_chr3.txt
+│   ├── all_matrix_chr4.txt
+│   ├── all_matrix_chr5.txt
+│   ├── all_matrix_chr6.txt
+│   ├── all_matrix_chr7.txt
+│   ├── all_matrix_chr8.txt
+│   ├── all_matrix_chr9.txt
+│   ├── all_matrix_chrM.txt
+│   ├── all_matrix_chrX.txt
+│   └── all_matrix_chrY.txt
+└── viewBS_files
+    ├── annots_mm10_cpgs_ViewBS.bed
+    ├── TRM_all_C.tab.gz
+    └── TRMMLL3_all_C.tab.gz
+5 directories, 40 files
+~~~
+
+## Single cell RNA-seq processed data files
+
+Besides, we also used single cell RNA-seq(scRNA-seq) data to revel our main logic conclusions and academic principles. As we known, analysis of scRNA-seq sometimes were really complicated which integrated many steps, such as normalization, batch effect reducing, cells clustering, cluster identification, cluster-specific signatures identification, trajectory constructing, dynamics expressing genes detecting, biology pathways enrichments and so on. As new technologies were into explosive era, there were thousands of algorithms and methods to deal with one part of them mentioned above, which caused benchmark report of these methods were not comprehensive. Hence, it’s really difficult to conclude our analysis pipeline and methods were perfect, but our analysis workflow sufficiently supported our main logic conclusions and academic principles definitely. For increasing our data reproducibility, we recorded and collected all processed data and codes files which also had been submitted on github, figshare and GEO. 
+
+And the detail lists were displayed as following:
+
+~~~SHELL
+.
+├── Chapter1
+│   ├── cellranger_out_files
+│   │   ├── Abdominal_LN
+│   │   │   ├── filtered_feature_bc_matrix
+│   │   │   │   ├── barcodes.tsv.gz
+│   │   │   │   ├── features.tsv.gz
+│   │   │   │   └── matrix.mtx.gz
+│   │   │   ├── possorted_genome_bam.bam
+│   │   │   └── possorted_genome_bam.bam.bai
+│   │   ├── Left_lung
+│   │   │   ├── filtered_feature_bc_matrix
+│   │   │   │   ├── barcodes.tsv.gz
+│   │   │   │   ├── features.tsv.gz
+│   │   │   │   └── matrix.mtx.gz
+│   │   │   ├── possorted_genome_bam.bam
+│   │   │   └── possorted_genome_bam.bam.bai
+│   │   ├── Liver
+│   │   │   ├── filtered_feature_bc_matrix
+│   │   │   │   ├── barcodes.tsv.gz
+│   │   │   │   ├── features.tsv.gz
+│   │   │   │   └── matrix.mtx.gz
+│   │   │   ├── possorted_genome_bam.bam
+│   │   │   └── possorted_genome_bam.bam.bai
+│   │   └── Thoracic_LN
+│   │       ├── filtered_feature_bc_matrix
+│   │       │   ├── barcodes.tsv.gz
+│   │       │   ├── features.tsv.gz
+│   │       │   └── matrix.mtx.gz
+│   │       ├── possorted_genome_bam.bam
+│   │       └── possorted_genome_bam.bam.bai
+│   ├── Others_processed
+│   │   ├── all_genes_signatures.svg
+│   │   ├── Ascl1_Lineage_tranje.png
+│   │   ├── Ascl1_Lineage_tranje_split.png
+│   │   ├── CDX_META_INFO.csv
+│   │   ├── cox_meta_vs_prima.svg
+│   │   ├── CTX_Metastasis_UP_map.png
+│   │   ├── DGE_Meta_Prima_heatmap.pdf
+│   │   ├── FinalCDXDataTable.csv
+│   │   ├── Neurod1_Lineage_tranje_GO_BP.svg
+│   │   ├── SCLC_ASCL1_pseudotime_with_anno.pdf
+│   │   ├── SCLC_ASCL1_pseudotime_with_Nature_Patients_survival_clu1.svg
+│   │   ├── SCLC_ASCL1_pseudotime_with_Nature_Patients_survival_clu2.svg
+│   │   ├── SCLC_ASCL1_pseudotime_with_SCLC_CDX_BARPLOT.svg
+│   │   ├── SCLC_map.png
+│   │   ├── SCLC_Nature_Clinical.csv
+│   │   └── SCLC_Nature_RNA.csv
+│   └── rds_files
+│       ├── 1_Metastasis1_path.rds
+│       ├── All_cells_markes.rds
+│       ├── all_merge_by_nothing.rds
+│       ├── Ascl1_pos_SCLC.rds
+│       ├── CTX_Metastasis_UP.rds
+│       ├── final_Metastasis_vs_primary.rds
+│       ├── SCLC_ASCL1_peudotime_genes.rds
+│       ├── SCLC_ASCL1_pseudotime_annotation_row1.rds
+│       ├── SCLC_ASCL1_pseudotime_heatmap_anno.rds
+│       ├── SCLC_ASCL1_pseudotime_heatmap_matrix.rds
+│       ├── SCLC_Neurod1_pseudotime_GO.rds
+│       ├── SCLC_Neurod1_pseudotime_heatmap_anno.rds
+│       └── V2_all_merge_by_nothing1.rds
+└── Chapter2
+    ├── cellranger_out_files
+    │   ├── KMT2C_KO
+    │   │   ├── filtered_feature_bc_matrix
+    │   │   │   ├── barcodes.tsv.gz
+    │   │   │   ├── features.tsv.gz
+    │   │   │   └── matrix.mtx.gz
+    │   │   ├── possorted_genome_bam.bam
+    │   │   └── possorted_genome_bam.bam.bai
+    │   └── scramble
+    │       ├── filtered_feature_bc_matrix
+    │       │   ├── barcodes.tsv.gz
+    │       │   ├── features.tsv.gz
+    │       │   └── matrix.mtx.gz
+    │       ├── possorted_genome_bam.bam
+    │       └── possorted_genome_bam.bam.bai
+    ├── Others_processed
+    │   └── only_sub_sc_both_pseudotime_all1.pdf
+    └── rds_files
+        ├── CTX_Metastasis_UP.rds
+        ├── only_sub_sc_0123_30_sub.rds
+        ├── only_sub_sc1_both_lineage.rds
+        ├── only_sub_sc_both_pseudotime_heatmap_anno_all.rds
+        └── only_sub_sc_both_pseudotime_heatmap_matrix_all.rds
+20 directories, 65 files
+~~~
+
+# **Markdown files recording codes of analyzing and visualization**
+
+## Codes of Single cell RNA-seq analysis
+
+To show how we analysis scRNA-seq steps by steps, we collected detail processed information in Markdown files that recorded the quality control, batch effect reducing, dimension reducing, cells clustering, pseudo time constructing, dynamics expression genes identification and pathways enrichments.
+
+Consideration our single cell data were composed by two major parts, including SCLC data with primary sample and metastasis sample and lung organoids data with scramble sample and Kmt2c knocking out sample. Hence, we divide our analysis code into two chapters.
+
+[Chapter1](scRNA-seq_Chapter1.md) is the codes for SCLC data with primary sample and metastasis sample. And you could access this code by click [here](scRNA-seq_Chapter1.md).
+
+[Chapter2](scRNA-seq_Chapter2.md) is the codes for lung organoids data with scramble sample and Kmt2c knocking out sample. And you could access this code by click [here](scRNA-seq_Chapter2.md).
+
+## Codes of Bulk RNA-seq analysis
+
+[Bulk_RNA ](bulk_RNA.md) is the codes for Bulk RNA-seq analysis in SCLC data.  And you could access this code by click [here](bulk_RNA.md).
+
+## Codes of Bulk ATAC-seq analysis
+
+[Bulk_ATAC ](bulk_ATAC.md) is the codes for Bulk RNA-seq analysis in SCLC data.  And you could access this code by click [here](bulk_ATAC.md).
+
+## Codes of Bulk WGBS-seq analysis
+
+[Bulk_WGBS ](bulk_WGBS.md) is the codes for Bulk RNA-seq analysis in SCLC data.  And you could access this code by click [here](bulk_WGBS.md).
+
+# **Citation**
+
+Our paper has been published on XXXXX
+
+You could downloaded raw data from [GEO Database GSEXXXX](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSEXXXX)
+
+
+
