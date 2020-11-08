@@ -13,7 +13,7 @@ plotHeatmap -m combine_all_TSS.mat.gz -out combine_all_TSS.svg \
  --colorList  'white,red' 'white,red' 'white,red'
 ~~~
 
-![image-20201108141818163](bulk_ATAC.assets\image-20201108141818163.png)
+![image-20201108141818163](bulk_ATAC.assets/image-20201108141818163.png)
 
 ~~~R
 library(ChIPseeker)
@@ -90,7 +90,7 @@ theme(plot.title = element_text(lineheight=.8, face="bold")) + xlim(-4,4)+ylim(0
             panel.grid.minor = element_blank())+theme_classic()
 ~~~
 
-![image-20201108154939130](bulk_ATAC.assets\image-20201108154939130.png)
+![image-20201108154939130](bulk_ATAC.assets/image-20201108154939130.png)
 
 ~~~R
 pri_PRMK_VS_pri_PRM <- mcreadRDS("1_PRMK_vs_PRM.rds",mc.cores=20)
@@ -148,7 +148,7 @@ enrich_pvalue <- function(N, A, B, k)
 enrich_pvalue(24223, 1497, 1196, 194) #2.99318e-21
 ~~~
 
-![image-20201108171829851](bulk_ATAC.assets\image-20201108171829851.png)
+![image-20201108171829851](bulk_ATAC.assets/image-20201108171829851.png)
 
 ~~~R
 T<-venn.diagram(list(PRMK_VS_PRM_PRM_open=na.omit(as.character(unique(PRMK_VS_PRM_PRM_open$SYMBOL))),PRM_up=na.omit(as.character(unique(PRM_up$symbol)))),
@@ -174,5 +174,5 @@ plot(fit1,quantities = TRUE )
 enrich_pvalue(24223, 4453, 883, 316) #5.346462e-09
 ~~~
 
-![image-20201108171914578](bulk_ATAC.assets\image-20201108171914578.png)
+![image-20201108171914578](bulk_ATAC.assets/image-20201108171914578.png)
 
