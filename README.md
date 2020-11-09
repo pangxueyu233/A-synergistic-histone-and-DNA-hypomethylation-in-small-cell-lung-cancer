@@ -2,7 +2,7 @@
 
 As we know, there were little omics data of SCLC patients even murine SCLC. Therefore, we have accumulated all omics data we could get accessed that also were re-analyzed and mentioned in our paper. And we also hope could real-time maintain these resources of SCLC, and if you have some data about SCLC we haven’t added or mentioned in list, you could contact us anytime and we would like to integrate your resource here. 
 
-To Increase analyzing reproducibility of our data, we will record and submit all scripts and processed data for sharing our murine data and academic principles. We have submitted all processed data on [figshare](https://figshare.com/) and you could download them followed their agreements. We also store our codes and figures in Markdown files that everyone could regarded as a tutorial for beginner of Omics analysis. And detail description you could get in following pages.
+To Increase analyzing reproducibility of our data, we will record and submit all scripts and processed data for sharing our murine data and academic principles. We have submitted all processed data on [figshare](https://figshare.com/account/projects/92384/articles/13206338) and you could download them followed their agreements. We also store our codes and figures in Markdown files that everyone could regarded as a tutorial for beginner of Omics analysis. And detail description you could get in following pages.
 
 In this project, we have modified a lot of function formulas from perfect packages to better use in our data analysis and visualizations. And we also be happy to share them to help you improve your work efficiency in omics data analysis and visualizations.
 
@@ -129,6 +129,8 @@ And if you want to use our data, you could download them  by clicking [here]().
 # **All processed data files should be used in our paper**
 
 In our paper, we used bulk omics data to deeply illustrate academic principles about SCLC metastasis, including bulk RNA-seq, bulk ATAC-seq and bulk WGBS-seq. To increase the reproducibility, we would like to share all processed files that you could download from GEO and figshare.The detail information of each processed file were displayed by tree map. And analysis codes of bulk omics data were recorded and collected that would help you understand how’s the processed files meaning and how’s them could be used in your study. 
+
+And you could get the access of these processed data files by clicking [here](https://figshare.com/account/projects/92384/articles/13206338). 
 
 Overview of All processed  files and modified codes
 
@@ -312,6 +314,8 @@ And the detail lists were displayed as following:
         └── only_sub_sc_both_pseudotime_heatmap_matrix_all.rds
 20 directories, 53 files
 ~~~
+
+**`.bam`** files were so large to submit on database, if you need further information requests for resources and reagents, you should be connected the lead contact. 
 
 # **Markdown files recording codes of analyzing and visualization**
 
