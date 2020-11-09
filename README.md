@@ -315,7 +315,7 @@ And the detail lists were displayed as following:
 20 directories, 53 files
 ~~~
 
-**`.bam`** files were so large to submit on database, if you need further information requests for resources and reagents, you should be connected the lead contact. 
+**`.bam`** files were so large to submit on database, if you need further information requests for resources and reagents, you should connect the lead contact. 
 
 # **Markdown files recording codes of analyzing and visualization**
 
