@@ -42,7 +42,6 @@ The tree map showed the files detail as following:
 └── SCLC_DATA_6
     ├── CDX_data.csv
     └── CDX_META_INFO.csv
-
 6 directories, 13 files
 ~~~
 
@@ -122,7 +121,6 @@ The tree map showed the files detail as following:
     ├── PRMK_1_clean_R2.fq.gz
     ├── PRMK_2_clean_R1.fq.gz
     └── PRMK_2_clean_R2.fq.gz
-
 4 directories, 62 files
 ~~~
 
@@ -137,13 +135,11 @@ Overview of All processed  files and modified codes
 ~~~shell
 .
 ├── ATAC-seq
-│   ├── bam_bw_files
 │   ├── gappedPeak_files
 │   └── RData_files
 ├── modified_codes
 │   └── MyBestFunction_scRNA.R
 ├── RNA-seq
-│   ├── bam_files
 │   ├── csv_files
 │   └── RData_files
 ├── SCLC_Patient_data
@@ -157,12 +153,11 @@ Overview of All processed  files and modified codes
 │   ├── Chapter1
 │   └── Chapter2
 └── WGBS
-    ├── CGmap_Igv_files
     ├── DMR_files
     ├── DMS_files
     ├── for_plot_files
     └── viewBS_files
-25 directories, 1 file
+22 directories, 1 file
 ~~~
 
 ## Bulk RNA-seq processed data files
@@ -171,24 +166,6 @@ All the RNA-seq processed data files were listed in the tree map as following:
 
 ~~~SHELL
 .
-├── bam_files
-│   ├── RNAseq1_Lung1.bam
-│   ├── RNAseq1_Lung2.bam
-│   ├── RNAseq1_Lung3.bam
-│   ├── RNAseq1_PRM_1.bam
-│   ├── RNAseq1_PRM_2.bam
-│   ├── RNAseq1_PRM_3.bam
-│   ├── RNAseq2_PRM_2.bam
-│   ├── RNAseq2_PRM_3.bam
-│   ├── RNAseq2_PRMK_1.bam
-│   ├── RNAseq2_PRMK_2.bam
-│   ├── RNAseq2_PRMK_3.bam
-│   ├── RNAseq3_sgMeis2_1.bam
-│   ├── RNAseq3_sgMeis2_2.bam
-│   ├── RNAseq3_sgMeis2_3.bam
-│   ├── RNAseq3_sgScr_1.bam
-│   ├── RNAseq3_sgScr_2.bam
-│   └── RNAseq3_sgScr_3.bam
 ├── csv_files
 │   ├── 1_RNAseq1_PRM_VS_Lung_result_all.csv
 │   ├── 1_RNAseq1_PRM_VS_Lung_result_DEGs.csv
@@ -205,7 +182,7 @@ All the RNA-seq processed data files were listed in the tree map as following:
     ├── RNAseq2_se.RData
     ├── RNAseq3_se.RData
     └── txdb_GRCm38.RData
-3 directories, 31 files
+2 directories, 14 files
 ~~~
 
 ## Bulk ATAC-seq processed data files
@@ -214,17 +191,6 @@ All the ATAC-seq processed data files were listed in the tree map as following:
 
 ~~~shell
 .
-├── bam_bw_files
-│   ├── all_PRM1.bam
-│   ├── all_PRM2.bam
-│   ├── all_PRMK1.bam
-│   ├── all_PRMK2.bam
-│   ├── all_PRM_liver1.bam
-│   ├── all_PRM_liver2.bam
-│   ├── combine_all_PRM.bw
-│   ├── combine_all_PRMK.bw
-│   ├── combine_all_PRM_liver.bw
-│   └── mm10.ucsc.refseq.bed
 ├── gappedPeak_files
 │   ├── all_PRM1_peaks.gappedPeak
 │   ├── all_PRM2_peaks.gappedPeak
@@ -241,7 +207,7 @@ All the ATAC-seq processed data files were listed in the tree map as following:
     ├── countsFromATAC.RData
     ├── met_PRM_VS_pri_PRM_res_symbol.rds
     └── pri_PRMK_VS_pri_PRM_res_symbol.rds
-3 directories, 24 files
+2 directories, 14 files
 ~~~
 
 ## Bulk WGBS-seq processed data files
@@ -250,52 +216,17 @@ All the WGBS-seq processed data files were listed in the tree map as following:
 
 ~~~shell
 .
-├── CGmap_Igv_files
-│   ├── TRMMLL3_rep1_all.CGmap.gz
-│   ├── TRMMLL3_rep2_all.CGmap.gz
-│   ├── TRMMLL3_WGBS.bw
-│   ├── TRM_rep1_all.CGmap.gz
-│   ├── TRM_rep2_all.CGmap.gz
-│   └── TRM_WGBS.bw
 ├── DMR_files
 │   ├── 1_PRMK_vs_PRM_DMR_all_cpgs_anno.csv
 │   ├── 1_PRMK_vs_PRM_DMR_all_gene_anno.csv
 │   └── 1_result_all_matrix_CG.txt
 ├── DMS_files
-│   ├── 1_PRMK_vs_PRM_DMS_all.csv
-│   ├── TRMMLL3_rep1_all.CGmap_2.txt
-│   ├── TRMMLL3_rep2_all.CGmap_2.txt
-│   ├── TRM_rep1_all.CGmap_2.txt
-│   └── TRM_rep2_all.CGmap_2.txt
+│   └── 1_PRMK_vs_PRM_DMS_all.csv
 ├── for_plot_files
-│   ├── all_matrix_CG.txt
-│   ├── all_matrix_chr10.txt
-│   ├── all_matrix_chr11.txt
-│   ├── all_matrix_chr12.txt
-│   ├── all_matrix_chr13.txt
-│   ├── all_matrix_chr14.txt
-│   ├── all_matrix_chr15.txt
-│   ├── all_matrix_chr16.txt
-│   ├── all_matrix_chr17.txt
-│   ├── all_matrix_chr18.txt
-│   ├── all_matrix_chr19.txt
-│   ├── all_matrix_chr1.txt
-│   ├── all_matrix_chr2.txt
-│   ├── all_matrix_chr3.txt
-│   ├── all_matrix_chr4.txt
-│   ├── all_matrix_chr5.txt
-│   ├── all_matrix_chr6.txt
-│   ├── all_matrix_chr7.txt
-│   ├── all_matrix_chr8.txt
-│   ├── all_matrix_chr9.txt
-│   ├── all_matrix_chrM.txt
-│   ├── all_matrix_chrX.txt
-│   └── all_matrix_chrY.txt
+│   └── all_matrix.tar.gz
 └── viewBS_files
-    ├── annots_mm10_cpgs_ViewBS.bed
-    ├── TRM_all_C.tab.gz
-    └── TRMMLL3_all_C.tab.gz
-5 directories, 40 files
+    └── annots_mm10_cpgs_ViewBS.bed
+4 directories, 6 files
 ~~~
 
 ## Single cell RNA-seq processed data files
@@ -309,33 +240,25 @@ And the detail lists were displayed as following:
 ├── Chapter1
 │   ├── cellranger_out_files
 │   │   ├── Abdominal_LN
-│   │   │   ├── filtered_feature_bc_matrix
-│   │   │   │   ├── barcodes.tsv.gz
-│   │   │   │   ├── features.tsv.gz
-│   │   │   │   └── matrix.mtx.gz
-│   │   │   ├── possorted_genome_bam.bam
-│   │   │   └── possorted_genome_bam.bam.bai
+│   │   │   └── filtered_feature_bc_matrix
+│   │   │       ├── barcodes.tsv.gz
+│   │   │       ├── features.tsv.gz
+│   │   │       └── matrix.mtx.gz
 │   │   ├── Left_lung
-│   │   │   ├── filtered_feature_bc_matrix
-│   │   │   │   ├── barcodes.tsv.gz
-│   │   │   │   ├── features.tsv.gz
-│   │   │   │   └── matrix.mtx.gz
-│   │   │   ├── possorted_genome_bam.bam
-│   │   │   └── possorted_genome_bam.bam.bai
+│   │   │   └── filtered_feature_bc_matrix
+│   │   │       ├── barcodes.tsv.gz
+│   │   │       ├── features.tsv.gz
+│   │   │       └── matrix.mtx.gz
 │   │   ├── Liver
-│   │   │   ├── filtered_feature_bc_matrix
-│   │   │   │   ├── barcodes.tsv.gz
-│   │   │   │   ├── features.tsv.gz
-│   │   │   │   └── matrix.mtx.gz
-│   │   │   ├── possorted_genome_bam.bam
-│   │   │   └── possorted_genome_bam.bam.bai
+│   │   │   └── filtered_feature_bc_matrix
+│   │   │       ├── barcodes.tsv.gz
+│   │   │       ├── features.tsv.gz
+│   │   │       └── matrix.mtx.gz
 │   │   └── Thoracic_LN
-│   │       ├── filtered_feature_bc_matrix
-│   │       │   ├── barcodes.tsv.gz
-│   │       │   ├── features.tsv.gz
-│   │       │   └── matrix.mtx.gz
-│   │       ├── possorted_genome_bam.bam
-│   │       └── possorted_genome_bam.bam.bai
+│   │       └── filtered_feature_bc_matrix
+│   │           ├── barcodes.tsv.gz
+│   │           ├── features.tsv.gz
+│   │           └── matrix.mtx.gz
 │   ├── Others_processed
 │   │   ├── all_genes_signatures.svg
 │   │   ├── Ascl1_Lineage_tranje.png
@@ -370,19 +293,15 @@ And the detail lists were displayed as following:
 └── Chapter2
     ├── cellranger_out_files
     │   ├── KMT2C_KO
-    │   │   ├── filtered_feature_bc_matrix
-    │   │   │   ├── barcodes.tsv.gz
-    │   │   │   ├── features.tsv.gz
-    │   │   │   └── matrix.mtx.gz
-    │   │   ├── possorted_genome_bam.bam
-    │   │   └── possorted_genome_bam.bam.bai
+    │   │   └── filtered_feature_bc_matrix
+    │   │       ├── barcodes.tsv.gz
+    │   │       ├── features.tsv.gz
+    │   │       └── matrix.mtx.gz
     │   └── scramble
-    │       ├── filtered_feature_bc_matrix
-    │       │   ├── barcodes.tsv.gz
-    │       │   ├── features.tsv.gz
-    │       │   └── matrix.mtx.gz
-    │       ├── possorted_genome_bam.bam
-    │       └── possorted_genome_bam.bam.bai
+    │       └── filtered_feature_bc_matrix
+    │           ├── barcodes.tsv.gz
+    │           ├── features.tsv.gz
+    │           └── matrix.mtx.gz
     ├── Others_processed
     │   └── only_sub_sc_both_pseudotime_all1.pdf
     └── rds_files
@@ -391,7 +310,7 @@ And the detail lists were displayed as following:
         ├── only_sub_sc1_both_lineage.rds
         ├── only_sub_sc_both_pseudotime_heatmap_anno_all.rds
         └── only_sub_sc_both_pseudotime_heatmap_matrix_all.rds
-20 directories, 65 files
+20 directories, 53 files
 ~~~
 
 # **Markdown files recording codes of analyzing and visualization**
