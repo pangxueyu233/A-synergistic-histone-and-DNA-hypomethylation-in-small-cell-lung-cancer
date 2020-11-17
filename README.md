@@ -2,9 +2,9 @@
 
 ![image-20201110223926307](README.assets/image-20201110223926307.png)
 
-As we know, there were little omics data of SCLC patients even murine SCLC. Therefore, we have accumulated all omics data we could get accessed that also were re-analyzed and mentioned in our paper. And we also hope could real-time maintain these resources of SCLC, and if you have some data about SCLC we haven’t added or mentioned in list, you could contact us anytime and we would like to integrate your resource here. 
+As we know, there were little omics data about SCLC patients and even murine SCLC. Therefore, we accumulated attainability omics data and pre-processed them to make it easier to use. And we also hope this page could be real-time maintained. If you have submitted SCLC data we haven’t recorded or mentioned in list, you could contact us anytime and we would like to integrate your resource in this resource. 
 
-To Increase analyzing reproducibility of our data, we will record and submit all scripts and processed data for sharing our murine data and academic principles. We have submitted all processed data on [figshare](https://figshare.com/account/projects/92384/articles/13206338) and you could download them followed their agreements. We also store our codes and figures in Markdown files that everyone could regarded as a tutorial for beginner of Omics analysis. And detail description you could get in following pages.
+To increase analyzing reproducibility of omics analysis mentioned in our paper, we will record and submit all scripts, raw data and processed data for sharing our bioinformatics tools and academic principles. We have submitted all processed data on [figshare](https://figshare.com/account/projects/92384/articles/13206338) and you could download them followed according agreements. Raw data also had been submitted on GEO database and you could be accessible by clicking [GSE161570]( https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161570). Besides, we also recorded our codes and figures in Markdown files regarded as tutorials for beginner of omics analysis. And detail description you could get in following pages.
 
 In this project, we have modified a lot of function formulas from perfect packages to better use in our data analysis and visualizations. And we also be happy to share them to help you improve your work efficiency in omics data analysis and visualizations.
 
@@ -126,7 +126,7 @@ The tree map showed the files detail as following:
 4 directories, 62 files
 ~~~
 
-And if you want to use our data, you could download them  by clicking [here]().
+And if you want to use our data, you could download them  by clicking [GSE161570](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161570).
 
 # **All processed data files should be used in our paper**
 
@@ -347,7 +347,9 @@ Consideration our single cell data were composed by two major parts, including S
 
 Our paper has been published on XXXXX
 
-You could downloaded raw data from [GEO Database GSEXXXX](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSEXXXX)
+You could downloaded raw data from [GEO Database GSE161570](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161570)
+
+You could downloaded processed data from [Figshare Database](https://figshare.com/account/projects/92384/articles/13206338)
 
 
 
