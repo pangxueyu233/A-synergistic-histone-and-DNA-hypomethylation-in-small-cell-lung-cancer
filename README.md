@@ -8,7 +8,7 @@ To increase analyzing reproducibility of omics analysis mentioned in our paper, 
 
 In this project, we have modified a lot of function formulas from perfect packages to better use in our data analysis and visualizations. And we also be happy to share them to help you improve your work efficiency in omics data analysis and visualizations.
 
-# **All SCLC patients’ data files list**
+# **All SCLC patients’ data files**
 
 This page recorded all omics data about SCLC patients that were mentioned and analyzed in our paper. And the detail list was displayed as following:
 
@@ -51,7 +51,7 @@ And if you want to use these SCLC patients data, you could follow our pipelines 
 
 And if you want to use modified function formulas mentioned in our paper, you could see the source codes by clicking [here](MyBestFunction_scRNA.md).
 
-# **All raw data files we have submitted on GEO**
+# **All raw data files**
 
 The tree map showed the files detail as following: 
 
@@ -128,7 +128,7 @@ The tree map showed the files detail as following:
 
 And if you want to use our data, you could download them  by clicking [GSE161570](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE161570).
 
-# **All processed data files should be used in our paper**
+# **All processed data files**
 
 In our paper, we used bulk omics data to deeply illustrate academic principles about SCLC metastasis, including bulk RNA-seq, bulk ATAC-seq and bulk WGBS-seq. To increase the reproducibility, we would like to share all processed files that you could download from GEO and figshare.The detail information of each processed file were displayed by tree map. And analysis codes of bulk omics data were recorded and collected that would help you understand how’s the processed files meaning and how’s them could be used in your study. 
 
@@ -319,7 +319,7 @@ And the detail lists were displayed as following:
 
 **`.bam`** files were so large to submit on database, if you need further information requests for resources and reagents, you should connect the lead contact. 
 
-# **Markdown files recording codes of analyzing and visualization**
+# **Codes of analyzing and visualization**
 
 ## Codes of Single cell RNA-seq analysis
 
