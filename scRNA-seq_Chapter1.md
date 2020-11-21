@@ -1,5 +1,3 @@
-
-
 # scRNA-seq analysis in SCLC with primary samples and metastasis samples
 
 In this pipeline, we showed the detail codes of scRNA-seq analyzing in SCLC with primary samples and metastasis samples, including quality control, dimension reducing, population clustering, differentiation genes expression identifying, trajectory constructing, dynamics expression genes identification and pathways enrichments. To make reproducible results from our code, the raw data and processed data were totally submitted. Besides, we generate Markdowns files to record all steps. 
