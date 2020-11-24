@@ -1,6 +1,6 @@
 # **A synergistic histone and DNA hypomethylation in small cell lung cancer**
 
-![image-20201121103949052](README.assets/image-20201121103949052.png)
+![image-20201124153922625](README.assets/image-20201124153922625.png)
 
 As we know, there were little omics data about SCLC patients and even murine SCLC. Therefore, we accumulated attainability omics data and pre-processed them to make it easier to use. And we also hope this page could be real-time maintained. If you have submitted SCLC data we haven’t recorded or mentioned in list, you could contact us anytime and we would like to integrate your resource in this resource. 
 
